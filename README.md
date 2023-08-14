@@ -1,49 +1,29 @@
-# Desafio6
+ProyetoFinalBack
+Cristofer Araya - Diego Rivera
 
-- Desafío - Soft Jobs.
+Back Proyecto Peluqueria Canina
+Requerimientos
 
-
+Crear un nuevo proyecto de npm e instalar todas las dependencias que necesitarás. (1 Punto)
+Utilizar el paquete pg para gestionar la comunicación con la base de datos PostgreSQL. (3 Puntos)
+Implementar la autenticación y autorización de usuarios con JWT. (2 Puntos)
+Usar el paquete CORS para permitir las consultas de orígenes cruzados. (1 Punto)
+Utilizar middlewares para validar las credenciales o token en cabeceras en las rutas que aplique. (2 Puntos)
+Realizar test de por lo menos 4 rutas de la API REST comprobando los códigos de estados de diferentes escenarios. (1 Punto)
 BD:
 
-CREATE DATABASE softjobs;
-\c softjobs;
-CREATE TABLE usuarios ( id SERIAL, email VARCHAR(50) NOT NULL, password
-VARCHAR(60) NOT NULL, rol VARCHAR(25), lenguage VARCHAR(20) );
-
+CREATE DATABASE softjobs; \c softjobs; CREATE TABLE usuarios ( id SERIAL, email VARCHAR(50) NOT NULL, password VARCHAR(60) NOT NULL, rol VARCHAR(25), lenguage VARCHAR(20) );
 
 SELECT * FROM usuarios;
 
 EP:
-* POST /usuarios
 
-  
-* GET /usuarios
+POST /usuarios
 
+GET /usuarios
 
-* POST /login
+POST /login
 
-
-
-Requerimientos:
-
-Permitir el registro de nuevos usuarios a través de una ruta POST /usuarios
-● Ofrecer la ruta POST /login que reciba las credenciales de un usuario y devuelva un
-token generado con JWT. Se debe incluir el payload del token el email del usuario
-registrado.
-● Disponibilizar una ruta GET /usuarios para devolver los datos de un usuario en caso
-de que esté autenticado, para esto:
-○ Extraiga un token disponible en la propiedad Authorization de las cabeceras
-○ Verifique la validez del token usando la misma llave secreta usada en su firma
-○ Decodifique el token para obtener el email del usuario a buscar en su payload
-○ Obtenga y devuelva el registro del usuario
-
-Registrar y obtener usuarios de la base de datos (1.5 puntos)
-2. Usar middlewares para (2 puntos):
-a. Verificar la existencia de credenciales en la ruta que corresponda
-b. Validar el token recibido en las cabeceras en la ruta que corresponda
-c. Reportar por la terminal las consultas recibidas en el servidor
-3. Firmar, verificar y decodificar tokens JWT (3 puntos)
-4. Capturar y devolver los posibles errores que ocurran en el servidor (0.5 puntos)
-5. Encriptar las contraseñas al momento de registrar nuevos usuarios (3 puntos)
+Back Proyecto Peluqueria Canina
 
 
